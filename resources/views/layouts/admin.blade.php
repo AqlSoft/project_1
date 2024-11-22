@@ -22,8 +22,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-
-
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
