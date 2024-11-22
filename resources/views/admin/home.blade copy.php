@@ -1,4 +1,4 @@
 @extends('layouts.front')
-@section('contents')
+@section('content')
     <a href="/admin/auth/login">الذهاب الى لوحة التحكم</a>
 @endsection

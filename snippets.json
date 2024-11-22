@@ -1,0 +1,10 @@
+{
+    "php": {
+        
+        "public function": {
+            "prefix": "pubfn",
+            "body": "public function ${1:functionName}(${2:arguments}) {\n\t$0\n}",
+            "description": "Create a public function"
+        }
+    }  
+}

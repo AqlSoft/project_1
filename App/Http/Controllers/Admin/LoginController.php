@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Admin\Controller;
+use Exception;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,11 +30,14 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $req)
     {
-        if (auth()->guard('admin')->attempt(['userName' => $req->input('userName'), 'password'=> $req->input('password')])) {
+
+
+        if (auth()->guard('admin')->attempt(['userName' => $req->input('userName'), 'password' => $req->input('password')])) {
             $user = auth()->user();
-            
-            return redirect()->route('admin.dashboard');
+
+            //return redirect()->route('admin.dashboard');
         } else {
+            throw new Exception('Error');
             return redirect()->back()->with('error', 'انت غير مسجل بقواعد البيانات لدينا');
         }
     }
@@ -42,11 +47,11 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function logout (Request $request) {        
-        
+    public function logout(Request $request)
+    {
+
         session()->flush();
         Auth::logout();
         return redirect()->route('admin.auth.login');
     }
-   
 }

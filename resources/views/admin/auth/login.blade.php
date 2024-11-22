@@ -26,6 +26,13 @@
             <div class="login-logo">
                 <a href=""><b>AKL</b>SOFT</a>
             </div>
+            @if (Session::has('error'))
+                <div class="container my-0">
+                    <div class="alert alert-sm py-2 my-0 alert-danger text-right">
+                        {!! Session::get('error') !!}
+                    </div>
+                </div>
+            @endif
             <!-- /.login-logo -->
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
