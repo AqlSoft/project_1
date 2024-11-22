@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  
+  /* Material Design Icons */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: rtl;
+  }
+
+/* new Styles */
+#cards h3  {
+    color: rgb(2, 60, 116);
+    display: inline-block;
+    position: relative;
+    font: bold 18px / 1.5 "Cairo Black";
+    padding: 0;
+}
+#cards h3 + .icon {
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 22px
+}
+#cards .card {
+    box-shadow: none;
+    background-color: #f4f6f9;
+    transition: all .3s ease;
+}
+#cards .card:hover {
+    box-shadow: 0 0 4px 1px #bbb;
+    background-color: #fff;
+}
+
+#cards .card-body .links-items {
+    padding: 1em;
+}
+#cards .card-body a {
+    padding: 3px;
+    margin-bottom: 5px;
+}
+#cards .card-body a > div {
+    overflow: hidden;
+    position: relative;
+    background-color: #f4f6f9;
+    box-shadow: none;
+}
+
+#cards .card-body a:hover > div{
+    background-color: #e4e4e4;
+    box-shadow: 0 0 4px 1px #bbb;
+}
+
+#cards .card-body a .item-icon {
+    font-size: 32px;
+}
+#cards .card-body a .item-stat {
+    width: 100px;
+    font: bold 18px/2 Cairo;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -200px;
+    padding: 3px 8px;
+    background-color: #ccc;
+    color: #030;
+    transition: all .3s ease;
+}
+#cards .card-body a:hover .item-stat {
+    left: 0
+}
+#cards .card-body a .item-text {
+    font: normal 18px/2 Cairo;
+    padding: 0 8px;
+}

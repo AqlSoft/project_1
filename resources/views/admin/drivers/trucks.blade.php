@@ -1,0 +1,23 @@
+<?php
+$collection = '[
+  { "id": 1, "a_name": "شاحنة شاحنة", "e_name": "Straight Truck" },
+  { "id": 2, "a_name": "شاحنة مقطورة مغلقة", "e_name": "Closed Trailer Truck" },
+  { "id": 3, "a_name": "شاحنة مقطورة مسطحة", "e_name": "Flatbed Trailer Truck" },
+  { "id": 4, "a_name": "شاحنة مقطورة درج", "e_name": "Step Deck Trailer Truck" },
+  { "id": 5, "a_name": "شاحنة مقطورة كونستوجا", "e_name": "Conestoga Trailer Truck" },
+  { "id": 6, "a_name": "شاحنة صهريج", "e_name": "Tanker Truck" },
+  { "id": 7, "a_name": "شاحنة قلابة", "e_name": "Dump Truck" },
+  { "id": 8, "a_name": "شاحنة ناقلة للماشية", "e_name": "Livestock Trailer Truck" },
+  { "id": 9, "a_name": "شاحنة تبريد", "e_name": "Refrigerated Truck" },
+  { "id": 10, "a_name": "شاحنة سقالة", "e_name": "Boom Truck" },
+  { "id": 11, "a_name": "شاحنة رافعة", "e_name": "Crane Truck" },
+  { "id": 12, "a_name": "شاحنة خرسانة", "e_name": "Concrete Truck" },
+  { "id": 13, "a_name": "شاحنة نفايات", "e_name": "Garbage Truck" },
+  { "id": 14, "a_name": "شاحنة سحب", "e_name": "Tow Truck" },
+  { "id": 15, "a_name": "شاحنة نقل الركاب", "e_name": "Passenger Bus" },
+  { "id": 16, "a_name": "شاحنة نقل الدبابات", "e_name": "Tank Hauler Truck" },
+  { "id": 17, "a_name": "شاحنة نقل الخشب", "e_name": "Logging Truck" },
+  { "id": 18, "a_name": "شاحنة نقل البريد", "e_name": "Postal Truck" },
+  { "id": 19, "a_name": "شاحنة نقل المواد الخطرة", "e_name": "Hazmat Truck" },
+  { "id": 20, "a_name": "شاحنة نقل سيارات الدفع الرباعي", "e_name": "Car Carrier Truck" },
+]';

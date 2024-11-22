@@ -1,0 +1,85 @@
+#forms .overlay-form {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000dc;
+    z-index: 1999;
+    display: none;
+}
+
+#forms form.addNewPeriod {
+    width: 500px;
+    background-color: #e9e9e9;
+    margin: 20vh auto;
+}
+
+#forms form.addNewPeriod .form-header {
+    width: 100%;
+    display: flex;
+    padding: 8px 16px;
+    background-color: #d4d4d4;
+}
+
+#forms form.addNewPeriod .form-body {
+    padding: 24px 16px 0;
+}
+
+#forms form.addNewPeriod .form-header h5 {
+    flex: auto;
+    text-align: right;
+}
+
+#forms form.addNewPeriod .form-header span.close-btn {
+    cursor: pointer;
+
+}
+#forms form.addNewPeriod .form-header span.close-btn:hover {
+    color: #733;
+}
+
+legend span {
+    display: inline-block;
+    border: 1px solid #1f9be2;
+    color: #1f9be2;
+    padding: 3px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+legend span:hover {
+    background-color: #1f9be2;
+    color: #fff;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+
+.priod-item {
+    display: grid;
+    padding: 1em;
+    position: relative;
+    margin: 8px;
+    border-radius: 12px;
+}
+
+.priod-item span {
+    font: normal 14px /1.3 Cairo;
+}
+
+.priod-item span.active-period {
+    font-size: 2em;
+    background-color: #373;
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    left: 2em;
+    padding: 0px 6px;
+    border-radius: 8px;
+}
+
+.priod-item span.set-active-period {
+    position: absolute;
+    top: 8px;
+    left: 1em;
+}

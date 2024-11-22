@@ -1,0 +1,70 @@
+:root {
+    --blue-color-dark: #276ff5;
+    --blue-color-lite: #dee7f7;
+    --black-color-dark: #636363;
+    --black-color-lite: #dfdfdf;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background: var(--blue-color-dark);
+}
+.nav.nav-tabs {
+    padding: 5px 0 0;
+}
+nav .nav.nav-tabs button.nav-link {
+    padding: 0 10px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    margin: 0 2px;
+    color: var(--black-color-dark);
+    border: 1px solid var(--black-color-dark);
+}
+
+nav .nav.nav-tabs button.nav-link.active {
+    margin-bottom: -3px;
+    color: var(--black-color-lite);
+    background-color: var(--black-color-dark);
+}
+.tab-content {
+    background-color: var(--black-color-dark);
+    margin-top: 0px;
+    border-top: 1px solid var(--blue-color-dark);
+    border-bottom: 1px solid var(--blue-color-dark);
+    height: 120px;
+}
+.tab-content .tab-pane {
+    color: var(--black-color-lite);
+    overflow: hidden;
+}
+
+.tab-content .tab-pane .nav-items {
+    padding: 0;
+    float: right;
+}
+.tab-content .tab-pane .nav-items .nav-item {
+    display: inline-block;
+    background-color: #fff;
+    width: 200px;
+}
+
+.tab-content .tab-pane .nav-items .nav-item .nav-link {
+    padding: 0;
+}
+
+.tab-content .tab-pane .nav-items .nav-item .nav-link a,
+.tab-content .tab-pane .nav-items .nav-item .nav-link i {
+    line-height: 28px;
+    height: 28px;
+    text-align: right;
+    display: inline-block;
+}
+.tab-content .tab-pane .nav-items .nav-item .nav-link i {
+    width: 28px;
+}
+.tab-content .tab-pane .nav-items .nav-item .nav-link a {
+    width: 160px;
+}

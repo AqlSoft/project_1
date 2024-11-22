@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cairo;
+}
+
+.text-right {
+    text-align: right;
+}
+
+body, html { 
+    width: 21cm;
+    margin: auto;
+    height: 29.5cm;
+    position: relative;
+}
+
+.receipt-container {
+    margin: 0 auto;
+    padding: 1em 1em 0;
+    height: 100%;
+    width: 100%;
+}
+.receipt {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.signatures p {
+    border-top: 2px dashed #0044ffbb;
+    min-width: 120px;
+}
+
+.receipt p b {
+    margin-bottom: -1em;
+    padding: 0 !important;
+    font-size: 20px;
+    display: block;
+}
+
+
+.receipt .footer p {
+    font-size: 10px;
+    line-height: 15px;
+    
+}
+
+
+.receipt .footer {
+    direction: rtl;
+    bottom: 1.5rem;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+}
+.receipt .footer .confirmation {
+    flex:4;
+}
+
+.receipt .footer .contact-info {
+    flex:6;
+    background-color: #0282fa;
+}
+
+.controls {
+    position: absolute;
+    top: 6em;
+    left: 1em !important; 
+}
+
+.bars i {
+    font-size: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 1px #888;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: none;
+    background-color: #eee;
+    box-shadow: 0 0 15px 1px #7778;
+    padding: 1em;
+    gap: 5px; 
+    max-width: 15cm;
+    margin-top: 1em;
+}
+.buttons .alert {
+    margin: 1em auto 0;
+}
+
+#receipt_items_table {
+    width: 100%;
+    border-bottom: 2px solid #0282fa;
+}
+
+#receipt_items_table thead th {
+    background-color: #0282fa;
+    color: #fff;
+    font: bold 14px / 1 Cairo;
+}
+
+#receipt_items_table thead th,
+#receipt_items_table td {
+    text-align: center;
+    padding: 5px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font: normal 14px / 1 Cairo;
+}
+
+#receipt_items_table thead th:last-child,
+#receipt_items_table td:last-child {
+    border-left: none;
+}
+
+@media print {
+    .controls {
+        display: none;
+
+    }
+    body, html { 
+        
+        overflow: hidden;
+    }
+    @page {
+        size: A4;
+        header: header;
+        footer: footer;
+    }
+
+}
