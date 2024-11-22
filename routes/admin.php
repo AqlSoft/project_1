@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\storesController;
 use App\Http\Controllers\admin\AdminsController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LoginController;
@@ -75,8 +76,10 @@ Route::group(
         Route::get('dettach/role/from/admin/{a}/{r}',       [AdminsController::class, 'dettachRole'])->name('dettach-role-from-admin');
         Route::post('dettach/roles/from/admins',            [AdminsController::class, 'assignRoles'])->name('dettach-roles-from-admin');
 
-        //Roles
-
-
+        /* ========================================================================================================================================
+        =========== Stores Routes Collection ===========================================================================================================
+        ======================================================================================================================================== */
+        Route::get('stores/home',            [storesController::class, 'home'])->name('stores-home');
+        Route::get('stores/index',            [storesController::class, 'index'])->name('display-stores-list');
     }
 );

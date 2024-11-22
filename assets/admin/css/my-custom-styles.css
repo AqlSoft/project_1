@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: normal 1rem/1.2 Arial;
+}
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0;
+}
+
+h1 {
+    font: Bold 1.4rem/1.2 Arial;
+}
+h2 {
+    font: Bold 1.3rem/1.2 Arial;
+}
+h3 {
+    font: Bold 1.2rem/1.2 Arial;
+}
+h4 {
+    font: Bold 1rem/1.2 Arial;
+}
+h5 {
+    font: Bold 0.9rem/1.2 Arial;
+}
+
+fieldset {
+    border: 0.5pt solid #dee2e6;
+    padding: 2rem 1rem 1rem;
+    position: relative;
+    margin: 0 1rem;
+}
+
+legend {
+    font: 400 1.2rem/1.2 Arial;
+    position: absolute;
+    padding: 0.25rem 0.5rem;
+    border:  1pt solid #dee2e6;
+    background-color: #fff;
+    left: 2rem;
+    z-index: 9;
+    top: -1rem;
+    width: auto;
+}

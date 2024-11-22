@@ -31,13 +31,12 @@ class LoginController extends Controller
     public function login(LoginRequest $req)
     {
 
-
+        // return var_dump(auth()->guard('admin')->attempt(['userName' => $req->input('userName'), 'password' => $req->input('password')]));
         if (auth()->guard('admin')->attempt(['userName' => $req->input('userName'), 'password' => $req->input('password')])) {
             $user = auth()->user();
 
-            //return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.dashboard');
         } else {
-            throw new Exception('Error');
             return redirect()->back()->with('error', 'انت غير مسجل بقواعد البيانات لدينا');
         }
     }
