@@ -67,10 +67,20 @@
                                 Go to ERP
                             </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#validation">Customers</a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#validation">
+                                Customers
+                            </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#superhero">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#marketing">Resources</a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#superhero">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#marketing">
+                                Resources
+                            </a>
                         </li>
                     </ul>
                     <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline" href="#!">Sign In</a><a
@@ -92,13 +102,13 @@
                                     class="fas fa-play me-2"></span>Watch the video </a></div>
                     </div>
                     <div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid"
-                            src="assets/img/hero/hero-img.png" alt="" /></div>
+                            src="{{asset('assets/front/uploads/images/hero-img.png')}}" alt="" /></div>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
+        <!-- ============================================ -->
+        <!-- <section> begin ============================ -->
         <section class="pt-5 pt-md-9 mb-6" id="feature">
             <div class="bg-holder z-index--1 bottom-0 d-none d-lg-block"
                 style="background-image:url(assets/img/category/shape.png);opacity:.5;"></div>
@@ -107,7 +117,7 @@
                 <h1 class="fs-9 fw-bold mb-4 text-center"> We design tools to unveil <br
                         class="d-none d-xl-block" />your superpowers</h1>
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6 mb-2"> <img class="mb-3 ms-n3" src="assets/img/category/icon1.png"
+                    <div class="col-lg-3 col-sm-6 mb-2"> <img class="mb-3 ms-n3" src="{{asset('assets/front/uploads/images/category/icon1.png')}}"
                             width="75" alt="Feature" />
                         <h4 class="mb-3">First click tests</h4>
                         <p class="mb-0 fw-medium text-secondary">While most people enjoy casino gambling,</p>
