@@ -59,16 +59,17 @@
                     @if ($item->id === 1)
                         @continue
                     @endif
-                    <li>{{ $item->name }}</li>
+                    <li class="category-item" data-cat-id="{{ $item->id }}">{{ $item->name }}</li>
                     @if ($item->children)
                         <ul>
                             @foreach ($item->children as $child)
-                                <li>{{ $child->name }}</li>
+                                <li class="category-item" data-cat-id="{{ $child->id }}">{{ $child->name }}</li>
                                 @if ($child->children)
                                     <ul>
                                         @foreach ($child->children as $grandchild)
-                                            <li>{{ $grandchild->name }}
-                                                <i class="fa fa-ellipsis-vertical"></i>
+                                            <li class="category-item" data-cat-id="{{ $grandchild->id }}">
+                                                {{ $grandchild->name }}
+
                                             </li>
                                         @endforeach
                                     </ul>
@@ -79,6 +80,64 @@
                 @endforeach
             </ul>
         </div>
-        <div class="col col-9">Products</div>
+        <div class="col col-9">Products
+            <div class="row">
+                <div class="card col col-6 mb-3">
+                    <div class="row g-0">
+                        <div class="col-3">
+                            <img src="https://placehold.it/100/363" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting .</p>
+                                <p class="card-text"><small class="text-body-secondary">See more</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col col-6 mb-3">
+                    <div class="row g-0">
+                        <div class="col-3">
+                            <img src="https://placehold.it/100/363" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting .</p>
+                                <p class="card-text"><small class="text-body-secondary">See more</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    </div>
+
+    <ul id="contextMenu" style="display: none;">
+        {{-- <li><a data-bs-toggle="collapse" data-bs-target="#addItemCategoryForm" aria-expanded="false"
+                aria-controls="addItemCategoryForm">Add Sub Category</a></li> --}}
+        <li><a href="/admin/items/categories/edit/__id">Edit Category</a></li>
+        <li><a href="/admin/items/categories/delete/__id">Delete Category</a></li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            $('.category-item').on('contextmenu', function(e) {
+                e.preventDefault();
+                $('#contextMenu').css({
+                    position: 'absolute',
+                    top: e.pageY + 'px',
+                    left: e.pageX + 'px',
+                    display: 'block',
+
+                }).fadeIn(300);
+            });
+
+            $(document).click(function() {
+                $('#contextMenu').fadeOut(200);
+            });
+
+        });
+    </script>
 @endsection

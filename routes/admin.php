@@ -93,7 +93,8 @@ Route::group(
         /* ========================================================================================================================================
         =========== Items Categories Routes Collection ===========================================================================================================
         ======================================================================================================================================== */
-        Route::post('items/categories/store',             [ItemCategoriesController::class, 'store'])->name('store-new-item');
-        Route::get('items/index',            [ItemsController::class, 'index'])->name('display-items-list');
+        Route::post('items/categories/store',               [ItemCategoriesController::class, 'store'])->name('store-new-item');
+        Route::get('items/categories/edit/{id}',            [ItemCategoriesController::class, 'edit'])->name('edit-item-info');
+        Route::get('items/categories/delete/{id}',          [ItemCategoriesController::class, 'destroy'])->name('destroy-item');
     }
 );

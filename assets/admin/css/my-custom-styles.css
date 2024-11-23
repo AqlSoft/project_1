@@ -3,6 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font: normal 1rem/1.2 Arial;
+    list-style-type: none;
+}
+#contextMenu {
+    position: absolute;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px #ccc;
 }
 h1, h2, h3, h4, h5 {
     margin-bottom: 0;
