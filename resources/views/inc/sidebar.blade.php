@@ -3,7 +3,6 @@
         class="sidebar-brand d-flex align-items-center pb-1 mb-1 link-body-emphasis text-decoration-none border-bottom">
         <img class="bi pe-none me-2" src="{{ asset('assets/admin/uploads/images/ayerp.logo.png') }}" width="30"
             height="30">
-
         <span class="fs-5 fw-semibold">AYERP Home</span>
     </a>
     <span class="sidebar-toggle"><i class="fa fa-bars"></i></span>
@@ -21,7 +20,8 @@
                             Home</a>
                     </li>
 
-                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                    <li><a href="/admin/items/index"
+                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">
                             <i class="fa fa-tags"></i> &nbsp; Items</a>
                     </li>
 

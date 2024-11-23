@@ -77,6 +77,17 @@
             </header>
             <div class="container-fluid">
                 <div class="container">
+                    @if (session('success'))
+                        <div class="alert alert-sm alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-sm alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                     @yield('contents')
                 </div>
             </div>

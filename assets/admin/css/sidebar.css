@@ -61,7 +61,7 @@ main {
 .btn-toggle:hover,
 .btn-toggle:focus {
     color: rgba(var(--bs-emphasis-color-rgb), .85);
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--bs-grey-200);
 }
 
 .btn-toggle::after {
@@ -80,6 +80,7 @@ main {
 
 .btn-toggle[aria-expanded="true"] {
     color: rgba(var(--bs-emphasis-color-rgb), .85);
+	background-color: var(--bs-grey-400);
 }
 
 .btn-toggle[aria-expanded="true"]::after {

@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\storesController;
 use App\Http\Controllers\admin\AdminsController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ItemCategoriesController;
+use App\Http\Controllers\Admin\ItemsController;
 use App\Http\Controllers\Admin\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -81,5 +83,17 @@ Route::group(
         ======================================================================================================================================== */
         Route::get('stores/home',            [storesController::class, 'home'])->name('stores-home');
         Route::get('stores/index',            [storesController::class, 'index'])->name('display-stores-list');
+
+        /* ========================================================================================================================================
+        =========== Items Routes Collection ===========================================================================================================
+        ======================================================================================================================================== */
+        Route::get('items/home',             [ItemsController::class, 'home'])->name('items-home');
+        Route::get('items/index',            [ItemsController::class, 'index'])->name('display-items-list');
+
+        /* ========================================================================================================================================
+        =========== Items Categories Routes Collection ===========================================================================================================
+        ======================================================================================================================================== */
+        Route::post('items/categories/store',             [ItemCategoriesController::class, 'store'])->name('store-new-item');
+        Route::get('items/index',            [ItemsController::class, 'index'])->name('display-items-list');
     }
 );
