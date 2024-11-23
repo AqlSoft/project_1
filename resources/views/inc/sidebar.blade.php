@@ -1,4 +1,4 @@
-<div class="main-sidebar flex-shrink-0 p-3" style="width: 220px;">
+<div class="main-sidebar flex-shrink-0" style="width: 220px;">
     <a href="/"
         class="sidebar-brand d-flex align-items-center pb-1 mb-1 link-body-emphasis text-decoration-none border-bottom">
         <img class="bi pe-none me-2" src="{{ asset('assets/admin/uploads/images/ayerp.logo.png') }}" width="30"
@@ -9,8 +9,8 @@
     <span class="sidebar-toggle"><i class="fa fa-bars"></i></span>
     <ul class="list-unstyled ps-0">
         <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                data-bs-target="#home-collapse" aria-expanded="true">
                 Store
             </button>
             <div class="collapse show" id="home-collapse">
@@ -36,8 +36,8 @@
             </div>
         </li>
         <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                data-bs-target="#dashboard-collapse" aria-expanded="false">
                 Dashboard
             </button>
             <div class="collapse" id="dashboard-collapse">
@@ -57,9 +57,10 @@
                 </ul>
             </div>
         </li>
+
         <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                data-bs-target="#orders-collapse" aria-expanded="false">
                 Orders
             </button>
             <div class="collapse" id="orders-collapse">
@@ -80,8 +81,8 @@
         </li>
 
         <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+            <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                data-bs-target="#account-collapse" aria-expanded="false">
                 Account
             </button>
             <div class="collapse" id="account-collapse">

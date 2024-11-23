@@ -42,3 +42,12 @@ legend {
     top: -1rem;
     width: auto;
 }
+
+/*=========================================
+===== Sidebar Styles ======================
+==========================================*/
+
+.main-sidebar button.btn-toggle::before {
+    left: auto;
+    right: 1rem !important;
+}
