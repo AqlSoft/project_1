@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login(LoginRequest $req)
+    public function login(Request $req)
     {
 
         // return var_dump(auth()->guard('admin')->attempt(['userName' => $req->input('userName'), 'password' => $req->input('password')]));

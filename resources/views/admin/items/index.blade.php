@@ -4,12 +4,7 @@
     <li class="breadcrumb-item active" aria-current="page">Home</li>
 @endsection
 @section('contents')
-    <h1 class="mt-3 pb-2" style="border-bottom: 2px solid #dedede">Items Home
-
-        <a class="btn btn-sm btn-outline-primary ms-3" data-bs-toggle="collapse" data-bs-target="#addItemCategoryForm"
-            aria-expanded="false" aria-controls="addItemCategoryForm"><i class="fa fa-folder-plus"></i></a>
-        <a class="btn btn-sm btn-outline-primary"><i class="fa fa-square-plus"></i></a>
-    </h1>
+    <h1 class="mt-3 pb-2" style="border-bottom: 2px solid #dedede">Display Product List</h1>
 
 
     <div class="row">
@@ -53,64 +48,85 @@
         </div>
     </div>
     <div class="row">
-        <div class="col col-3">Root
-            <ul>
-                @foreach ($cats as $item)
-                    @if ($item->id === 1)
-                        @continue
-                    @endif
-                    <li class="category-item" data-cat-id="{{ $item->id }}">{{ $item->name }}</li>
-                    @if ($item->children)
-                        <ul>
-                            @foreach ($item->children as $child)
-                                <li class="category-item" data-cat-id="{{ $child->id }}">{{ $child->name }}</li>
-                                @if ($child->children)
-                                    <ul>
-                                        @foreach ($child->children as $grandchild)
-                                            <li class="category-item" data-cat-id="{{ $grandchild->id }}">
-                                                {{ $grandchild->name }}
-
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            @endforeach
-                        </ul>
-                    @endif
-                @endforeach
-            </ul>
+        <div class="col col-4">
+            <fieldset class="mt-4 mx-0 mb-0">
+                <legend>Root &nbsp; &nbsp;
+                    <a class=" ms-3" data-bs-toggle="collapse" data-bs-target="#addItemCategoryForm" aria-expanded="false"
+                        aria-controls="addItemCategoryForm"><i data-bs-toggle="tooltip" data-bs-title="Add New Category"
+                            class="fa fa-plus"></i></a>
+                </legend>
+                <ol id="tree" class="mt-0">
+                    @foreach ($cats as $item)
+                        @if ($item->id === 1)
+                            @continue
+                        @endif
+                        <li>
+                            <input type="checkbox" id="item_{{ $item->id }}" checked />
+                            <label for="item_{{ $item->id }}" class="my-0">{{ $item->name }}</label>
+                            @if ($item->children)
+                                <ol>
+                                    @foreach ($item->children as $child)
+                                        <li>
+                                            <input type="checkbox" id="item_{{ $child->id }}" checked />
+                                            <label for="item_{{ $child->id }}">{{ $child->name }}</label>
+                                            @if ($child->children)
+                                                <ol>
+                                                    @foreach ($child->children as $grandChild)
+                                                        <li>
+                                                            <label>
+                                                                {{ $grandChild->name }}
+                                                            </label>
+                                                        </li>
+                                                    @endforeach
+                                                </ol>
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                </ol>
+                            @endif
+                        </li>
+                    @endforeach
+                </ol>
+            </fieldset>
         </div>
-        <div class="col col-9">Products
-            <div class="row">
-                <div class="card col col-6 mb-3">
-                    <div class="row g-0">
-                        <div class="col-3">
-                            <img src="https://placehold.it/100/363" class="img-fluid rounded-start" alt="...">
+        <div class="col col-8">
+            <fieldset class="mt-4 mx-0 mb-0">
+                <legend>Products &nbsp; &nbsp;
+                    <a class=" ms-3" data-bs-toggle="collapse" data-bs-target="#addItemForm" aria-expanded="false"
+                        aria-controls="addItemForm"><i data-bs-toggle="tooltip" data-bs-title="Add New Item"
+                            class="fa fa-plus"></i></a>
+                </legend>
+                <div class="row">
+                    <div class="card col col-6 mb-3">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <img src="" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting .</p>
+                                    <p class="card-text"><small class="text-body-secondary">See more</small></p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting .</p>
-                                <p class="card-text"><small class="text-body-secondary">See more</small></p>
+                    </div>
+                    <div class="card col col-6 mb-3">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <img src="" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting .</p>
+                                    <p class="card-text"><small class="text-body-secondary">See more</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card col col-6 mb-3">
-                    <div class="row g-0">
-                        <div class="col-3">
-                            <img src="https://placehold.it/100/363" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting .</p>
-                                <p class="card-text"><small class="text-body-secondary">See more</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </fieldset>
         </div>
     </div>
     </div>

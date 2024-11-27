@@ -1,69 +1,61 @@
 @extends('layouts.admin')
-@section('title') Inventory Home @endsection
-@section('homePage') Home @endsection
-@section('homeLink') Home Link @endsection
-@section('homeLinkActive') Home Active Link @endsection
-@section('content')
-<div class="row">
-  <div class="col-lg-6">
-    <div class="card card-primary card-outline">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+@section('title', 'Dashboard')
 
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </p>
 
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
+@section('contents')
+    <style>
+        #dashboard .card a span.link-item {
+            color: #474747;
+            font: normal 1rem / 1.2 'Cairo';
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    <div class="row" id="dashboard">
+        <div class="col-lg-9">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5 class="card-title">General Setting</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row" style="justify-content: space-between">
+                        <div class="col col-3">
+                            <a id="branches" class="dashboard-item" href="/admin/branches/home">
+                                <i class="fa fa-code-branch fs-3"></i>
+                                <span class="link-item">Branches</span>
+                            </a>
+                        </div>
+                        <div class="col col-3">
+                            <a id="branches" class="dashboard-item" href="/admin/branches/home">
+                                <i class="fa fa-code-branch fs-3"></i>
+                                <span class="link-item">Branches</span>
+                            </a>
+                        </div>
+                        <div class="col col-3">
+                            <a id="branches" class="dashboard-item" href="/admin/branches/home">
+                                <i class="fa fa-code-branch fs-3"></i>
+                                <span class="link-item">Branches</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5 class="card-title">Card 2 title</h5>
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's
+                        content.
+                    </p>
+                </div>
+
+            </div>{{-- /.card --}}
+        </div>
+
     </div>
-
-    <div class="card card-primary card-outline">
-      <div class="card-header">
-        <h5 class="card-title">Card title</h5>
-      </div>
-      <div class="card-body">
-
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>{{-- /.card --}}
-  </div>
-  {{-- /.col-md-6 --}}
-  <div class="col-lg-6">
-    <div class="card card-primary card-outline">
-      <div class="card-header">
-        <h5 class="m-0">Featured</h5>
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Special title treatment</h6>
-
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-
-    <div class="card card-primary card-outline">
-      <div class="card-header">
-        <h5 class="m-0">Featured</h5>
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Special title treatment</h6>
-
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  {{-- /.col-md-6 --}}
-</div>
-{{-- /.row --}}
+    {{-- /.row --}}
 @endsection

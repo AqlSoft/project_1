@@ -7,12 +7,14 @@
     </a>
     <span class="sidebar-toggle"><i class="fa fa-bars"></i></span>
     <ul class="list-unstyled ps-0">
+
+
         <li class="mb-1">
             <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
-                data-bs-target="#home-collapse" aria-expanded="true">
+                data-bs-target="#home-collapse" aria-expanded="false">
                 Store
             </button>
-            <div class="collapse show" id="home-collapse">
+            <div class="collapse" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li><a href="/admin/stores/home"
                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">
@@ -37,16 +39,16 @@
         </li>
         <li class="mb-1">
             <button class="btn btn-toggle d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
-                data-bs-target="#dashboard-collapse" aria-expanded="false">
+                data-bs-target="#dashboard-collapse" aria-expanded="true">
                 Dashboard
             </button>
-            <div class="collapse" id="dashboard-collapse">
+            <div class="collapse show" id="dashboard-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#"
-                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
+                    <li><a href="/admin/dashboard/home"
+                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Home</a>
                     </li>
                     <li><a href="#"
-                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
+                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Setting</a>
                     </li>
                     <li><a href="#"
                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a>

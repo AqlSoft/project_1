@@ -23,16 +23,16 @@ class Admin extends Authenticatable
 
     public function assignRole($role_id)
     {
-        try {
-            AdminRole::create([
-                'admin_id' => $this->id,
-                'role_id' => $role_id
-            ]);
-            return true;
-        } catch (QueryException $err) {
-            $err;
-            return false;
-        }
+        // try {
+        //     AdminRole::create([
+        //         'admin_id' => $this->id,
+        //         'role_id' => $role_id
+        //     ]);
+        //     return true;
+        // } catch (QueryException $err) {
+        //     $err;
+        //     return false;
+        // }
     }
     public function profile()
     {
@@ -41,16 +41,16 @@ class Admin extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class);
+        // return $this->belongsToMany(Role::class);
     }
 
     public function getRoles()
     {
-        $ars = AdminRole::where(['admin_id' => $this->id])->get();
+        // $ars = AdminRole::where(['admin_id' => $this->id])->get();
 
-        foreach ($ars as $index => $ar) {
-            $this->assignedRoles[] = Role::where(['id' => $ar->role_id])->with('permissions')->first();
-        }
+        // foreach ($ars as $index => $ar) {
+        //     $this->assignedRoles[] = Role::where(['id' => $ar->role_id])->with('permissions')->first();
+        // }
     }
 
     public function fullName()

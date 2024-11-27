@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\storesController;
 use App\Http\Controllers\admin\AdminsController;
+use App\Http\Controllers\Admin\BranchesController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ItemCategoriesController;
 use App\Http\Controllers\Admin\ItemsController;
@@ -24,7 +25,7 @@ Route::group(
     [
         'namespace'     => 'Admin',
         'prefix'        => 'admin',
-        'middleware'    => 'auth:admin'
+        'middleware'    => 'auth:Admin'
     ],
     function () {
 
@@ -37,6 +38,7 @@ Route::group(
         //======================================================= General Stats ==========================================================================================
         //=====================================================================================================================================================================
         Route::get('home/index',                                         [HomeController::class, 'index'])->name('home.index');
+        // Route::get('branches/home',                                      [BranchesController::class, 'index'])->name('display-branches-list');
     }
 );
 
@@ -49,8 +51,9 @@ Route::group(
     function () {
         // Route::get('logout',                                    [LoginController::class, 'logout']);
         // Route::get('logout',                                    [LoginController::class, 'logout']);
-        Route::get('/auth/login',                                       [LoginController::class, 'index'])->name('admin.auth.login');
-        Route::post('login',                                            [LoginController::class, 'login'])->name('admin.login');
+        Route::get('/auth/login',                                  [LoginController::class, 'index'])->name('admin.auth.login');
+        Route::post('/login',                                      [LoginController::class, 'login'])->name('admin.login');
+        // Route::get('/auth/zibala',                                  [LoginController::class, 'login'])->name('login');
     }
 );
 
@@ -78,11 +81,7 @@ Route::group(
         Route::get('dettach/role/from/admin/{a}/{r}',       [AdminsController::class, 'dettachRole'])->name('dettach-role-from-admin');
         Route::post('dettach/roles/from/admins',            [AdminsController::class, 'assignRoles'])->name('dettach-roles-from-admin');
 
-        /* ========================================================================================================================================
-        =========== Stores Routes Collection ===========================================================================================================
-        ======================================================================================================================================== */
-        Route::get('stores/home',            [storesController::class, 'home'])->name('stores-home');
-        Route::get('stores/index',            [storesController::class, 'index'])->name('display-stores-list');
+
 
         /* ========================================================================================================================================
         =========== Items Routes Collection ===========================================================================================================

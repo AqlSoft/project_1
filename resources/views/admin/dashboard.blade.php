@@ -1,7 +1,5 @@
 @extends('layouts.admin')
-@section('title')
-    Dashboard
-@endsection
+@section('title', 'Dashboard')
 @section('homePage')
     Dashboard
 @endsection
@@ -17,7 +15,7 @@
             <i class="fas fa-cogs text-light"></i></a></button>
 @endsection
 
-@section('content')
+@section('contents')
     <div class="container pt-5" style="min-height: 100vh">
         <div class="cards">
             <div class="card w-100">

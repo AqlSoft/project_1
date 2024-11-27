@@ -37,8 +37,6 @@ class ItemCategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
-
         try {
             ItemCategroy::create([
                 'name'         => $request->name,
